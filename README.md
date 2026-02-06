@@ -153,7 +153,3 @@ Nếu gặp lỗi:
 **Thiết kế gốc**: Phan Quoc Thai  
 **Migration sang Vue 3 + Vite**: Thực hiện bởi mình  
 **Cập nhật lần cuối**: Tháng 2/2026  
-
----
-
-Bạn có muốn mình viết thêm một phiên bản README ngắn gọn hơn, kiểu “dành cho GitHub” – súc tích, chỉ highlight những điểm chính, để người xem repo đọc nhanh là hiểu không?
