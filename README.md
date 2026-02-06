@@ -1,81 +1,64 @@
 # Portfolio QUOC THAI - Vue 3 + Vite Migration
 
-## 🎯 Project Overview
+## 🎯 Giới thiệu dự án
 
-This project is a modern portfolio website for Phan Quoc Thai, refactored from a single HTML file with embedded Vue 3 code into a clean, scalable Vue 3 + Vite architecture.
+Đây là website portfolio cá nhân của mình – **Phan Quoc Thai**. Ban đầu nó chỉ là một file HTML duy nhất với code Vue 3 nhúng bên trong. Sau một thời gian sử dụng, mình quyết định refactor lại toàn bộ sang kiến trúc **Vue 3 + Vite** để dễ mở rộng, dễ bảo trì và chuyên nghiệp hơn.
 
-## 📋 Migration Summary
+## 📋 Quá trình migration
 
-### ✅ Completed Migration Tasks
+### ✅ Những việc đã hoàn thành
 
-1. **Project Structure Analysis**
-   - Analyzed original single HTML file with embedded Vue 3 code
-   - Identified all sections and components
-   - Documented all functionality and features
+1. **Phân tích cấu trúc cũ**
+   - Xem lại toàn bộ code trong file HTML gốc
+   - Liệt kê các section, component và tính năng
+   - Ghi chú chi tiết để không bỏ sót
 
-2. **Vue 3 + Vite Setup**
-   - Created `package.json` with Vue 3, Vue Router, Vite dependencies
-   - Configured `vite.config.js` with proper aliases
-   - Set up `tailwind.config.js` with custom colors and animations
-   - Created `postcss.config.js` for CSS processing
+2. **Setup Vue 3 + Vite**
+   - Tạo `package.json` với các dependency cần thiết (Vue 3, Vue Router, Vite…)
+   - Config `vite.config.js` với alias cho gọn gàng
+   - Setup `tailwind.config.js` với màu sắc, animation custom
+   - Thêm `postcss.config.js` để xử lý CSS
 
-3. **Component Architecture**
-   - **MainLayout.vue**: Main layout wrapper with navigation and footer
-   - **NavigationBar.vue**: Responsive navigation with mobile menu
-   - **FooterSection.vue**: Footer with social links and copyright
-   - **Home.vue**: Main page component
-   - **AboutSection.vue**: About section with personal info
-   - **SkillsSection.vue**: Technical and professional skills
-   - **ServicesSection.vue**: Services offered
-   - **ProjectsSection.vue**: Project showcase
-   - **ContactSection.vue**: Contact form and information
+3. **Kiến trúc component**
+   - **MainLayout.vue**: layout chính, có navigation và footer
+   - **NavigationBar.vue**: menu responsive, có mobile toggle
+   - **FooterSection.vue**: footer với social links
+   - **Home.vue**: trang chính
+   - Các section: About, Skills, Services, Projects, Contact
 
-4. **State Management**
-   - Converted all JavaScript functionality to Vue reactive state
-   - Maintained language switching (Vietnamese/English)
-   - Preserved dark mode functionality
-   - Kept all form validation and submission logic
+4. **Quản lý state**
+   - Chuyển toàn bộ logic JS sang reactive state của Vue
+   - Giữ nguyên tính năng đổi ngôn ngữ (vi/en)
+   - Dark mode vẫn hoạt động
+   - Form validation và submit logic được giữ lại
 
 5. **Styling**
-   - Migrated all CSS to `src/styles/main.css`
-   - Maintained Tailwind CSS configuration
-   - Preserved all custom animations and gradients
-   - Kept responsive design intact
+   - Toàn bộ CSS đưa vào `src/styles/main.css`
+   - Tailwind CSS vẫn là nền tảng chính
+   - Animation, gradient custom vẫn chạy tốt
+   - Responsive design không bị ảnh hưởng
 
-## 🚀 Installation & Running
+## 🚀 Cài đặt & chạy dự án
 
-### Prerequisites
-- Node.js (version 16 or higher)
-- npm or yarn
+### Yêu cầu
+- Node.js >= 16
+- npm hoặc yarn
 
-### Installation Steps
+### Các bước
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
 
-2. **Run development server:**
-   ```bash
-   npm run dev
-   ```
-
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
-4. **Preview production build:**
-   ```bash
-   npm run preview
-   ```
-
-## 📁 Project Structure
+## 📁 Cấu trúc thư mục
 
 ```
 src/
 ├── assets/
-│   └── images/           # Static images (to be added)
+│   └── images/
 ├── components/
 │   ├── common/
 │   │   ├── NavigationBar.vue
@@ -98,106 +81,79 @@ src/
 └── main.js
 ```
 
-## 🎨 Features Preserved
+## 🎨 Các tính năng
 
-### Original Features Maintained:
-- ✅ **Multi-language Support**: Vietnamese (vi) and English (en)
-- ✅ **Dark Mode**: Toggle between light and dark themes
-- ✅ **Responsive Design**: Mobile-first approach
-- ✅ **Smooth Scrolling**: Navigation between sections
-- ✅ **Contact Form**: Functional form with validation
-- ✅ **Portfolio Sections**: Hero, About, Skills, Services, Projects, Contact
-- ✅ **Social Links**: LinkedIn, GitHub, Twitter, Instagram placeholders
-- ✅ **Animations**: Fade-in, slide-up, scale-in, float effects
-- ✅ **Gradient Effects**: Custom gradient colors and text
-- ✅ **Lottie Animations**: Embedded Lottie player for hero and about sections
+- Đa ngôn ngữ (vi/en)  
+- Dark mode toggle  
+- Responsive design (mobile-first)  
+- Smooth scrolling giữa các section  
+- Contact form có validation  
+- Hero, About, Skills, Services, Projects, Contact đầy đủ  
+- Social links (LinkedIn, GitHub, Twitter, Instagram – placeholder)  
+- Animation: fade-in, slide-up, scale-in, float  
+- Gradient text và background  
+- Lottie animation cho hero và about  
 
-### Technical Features:
-- ✅ **Vue 3 Composition API**: Modern Vue development
-- ✅ **Vue Router**: Single Page Application navigation
-- ✅ **Tailwind CSS**: Utility-first CSS framework
-- ✅ **Vite**: Fast build tool and development server
-- ✅ **Local Storage**: Language and theme preferences persistence
-- ✅ **Form Validation**: Client-side validation
-- ✅ **Responsive Navigation**: Mobile menu with hamburger toggle
+## 🔧 Config quan trọng
 
-## 🔧 Configuration Files
+- **package.json**: Vue 3.4.0, Vue Router 4.2.5, Vite 5.0.0, Tailwind 3.3.6  
+- **tailwind.config.js**: custom color, dark mode, animation  
+- **vite.config.js**: plugin Vue, alias, dev server  
 
-### `package.json`
-- Vue 3.4.0
-- Vue Router 4.2.5
-- Vite 5.0.0
-- Tailwind CSS 3.3.6
-- Autoprefixer and PostCSS
+## 🌟 Điểm cải thiện
 
-### `tailwind.config.js`
-- Custom color palette with gradient support
-- Dark mode configuration
-- Custom animations and keyframes
-- Extended theme with Vietnamese-friendly colors
+- Code chia nhỏ thành component, dễ tái sử dụng  
+- State quản lý rõ ràng hơn  
+- Cấu trúc gọn gàng, dễ maintain  
+- Dễ mở rộng thêm page mới  
+- Dev experience tốt hơn (HMR, build nhanh)  
+- Build production tối ưu  
 
-### `vite.config.js`
-- Vue plugin configuration
-- Path alias for clean imports
-- Development server setup
+## 📝 Việc cần làm tiếp
 
-## 🌟 Key Improvements
+- Test lại toàn bộ với `npm run dev`  
+- Thêm hình ảnh thật cho project showcase  
+- Cập nhật social links với URL thật  
+- Kết nối contact form với backend thực tế  
+- Thêm chức năng tải CV/PDF  
 
-1. **Modular Architecture**: Separated concerns into reusable components
-2. **Better State Management**: Centralized state in components
-3. **Improved Maintainability**: Clean, organized code structure
-4. **Scalability**: Easy to add new pages and features
-5. **Development Experience**: Hot module replacement and fast builds
-6. **Production Ready**: Optimized builds for deployment
+### Nâng cấp trong tương lai
+- Thêm page: About, Projects, Blog  
+- Pinia cho state phức tạp  
+- TypeScript để có type safety  
+- Unit test framework  
+- SEO: meta tags, sitemap  
+- Performance: lazy load, image optimization  
+- Accessibility: ARIA labels, keyboard navigation  
 
-## 📝 Next Steps & Recommendations
+### Tách nhỏ component
+- SkillCard.vue  
+- ProjectCard.vue  
+- ServiceCard.vue  
+- ContactForm.vue  
+- LanguageToggle.vue  
+- ThemeToggle.vue  
 
-### Immediate Actions:
-1. **Test the application** with `npm install && npm run dev`
-2. **Add real project images** to replace placeholder images
-3. **Update social media links** with actual URLs
-4. **Configure contact form** with real backend endpoint
-5. **Add CV/PDF download** functionality
+## 🐛 Vấn đề còn tồn tại
 
-### Future Enhancements:
-1. **Additional Pages**: About, Projects, Blog pages
-2. **Pinia Integration**: For complex state management
-3. **TypeScript**: Add type safety
-4. **Unit Tests**: Add testing framework
-5. **SEO Optimization**: Add meta tags and sitemap
-6. **Performance**: Image optimization and lazy loading
-7. **Accessibility**: Improve ARIA labels and keyboard navigation
+- Lottie player nên chuyển sang Vue component (`vue3-lottie`)  
+- Font Awesome nên cài qua npm thay vì CDN  
+- Asset path cần chỉnh lại khi deploy  
 
-### Component Splitting Suggestions:
-1. **SkillCard.vue**: Individual skill display component
-2. **ProjectCard.vue**: Individual project showcase component
-3. **ServiceCard.vue**: Service offering component
-4. **ContactForm.vue**: Standalone contact form component
-5. **LanguageToggle.vue**: Dedicated language switcher
-6. **ThemeToggle.vue**: Dedicated theme switcher
+## 📞 Hỗ trợ
 
-## 🐛 Known Issues & Solutions
-
-### Potential Issues:
-1. **Lottie Player**: May need to be converted to Vue component
-2. **External Dependencies**: Some CDN links may need updating
-3. **Asset Paths**: May need adjustment based on deployment
-
-### Solutions:
-1. Install `vue3-lottie` package for better Lottie integration
-2. Move Font Awesome to npm package instead of CDN
-3. Use Vite's asset handling for images and files
-
-## 📞 Contact & Support
-
-For questions or issues:
-- Check the browser console for JavaScript errors
-- Verify all npm packages are installed correctly
-- Ensure Node.js version compatibility
-- Check network requests for external resource loading
+Nếu gặp lỗi:
+- Kiểm tra console log  
+- Đảm bảo cài đủ npm package  
+- Node.js version đúng  
+- Kiểm tra network request  
 
 ---
 
-**Original Design**: Phan Quoc Thai  
-**Vue 3 + Vite Migration**: Senior Frontend Engineer  
-**Last Updated**: February 2026
+**Thiết kế gốc**: Phan Quoc Thai  
+**Migration sang Vue 3 + Vite**: Thực hiện bởi mình  
+**Cập nhật lần cuối**: Tháng 2/2026  
+
+---
+
+Bạn có muốn mình viết thêm một phiên bản README ngắn gọn hơn, kiểu “dành cho GitHub” – súc tích, chỉ highlight những điểm chính, để người xem repo đọc nhanh là hiểu không?
